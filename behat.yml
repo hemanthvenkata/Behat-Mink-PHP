@@ -1,0 +1,39 @@
+chrome:
+  formatters:
+    pretty: true
+  extensions:
+    Behat\MinkExtension:
+            base_url: https://saucelabs.com/
+            browser_name:            chrome
+            selenium2: 
+                wd_host: 'hemanthsanthu:9434ed2e-fb5a-47ae-b189-13eacc537270@ondemand.saucelabs.com/wd/hub'
+                capabilities: {'platform':'Windows 8', 'browser': 'chrome', 'name': 'Chrome Test'}
+firefox:
+  formatters:
+    pretty: true
+  extensions:
+    Behat\MinkExtension:
+            base_url: https://saucelabs.com/
+            browser_name:            firefox
+            selenium2: 
+               wd_host: 'hemanthsanthu:9434ed2e-fb5a-47ae-b189-13eacc537270@ondemand.saucelabs.com/wd/hub'
+               capabilities: {'platform':'Windows 8', 'browser': 'firefox', 'name': 'Firefox Test'}
+iexplore:
+  formatters:
+    pretty: true
+  extensions:
+    Behat\MinkExtension:
+            base_url: https://saucelabs.com/
+            browser_name:            iexplore
+            selenium2: 
+               wd_host: 'hemanthsanthu:9434ed2e-fb5a-47ae-b189-13eacc537270@ondemand.saucelabs.com/wd/hub'
+               capabilities: {'platform':'Windows 8', 'browser': 'iexplore', 'version': '10.0', 'name': 'IE Test'}
+firefox_local:
+  formatters:
+    pretty: true
+  extensions:
+    Behat\MinkExtension:
+            base_url: https://saucelabs.com/
+            selenium2: 
+              browser: 'firefox'
+              wd_host: http://localhost:4444/wd/hub

@@ -1,0 +1,31 @@
+<project name="behat" basedir=".">
+   <target name="local">
+    <exec dir="${basedir}" executable="cmd" failonerror="true">
+     <arg line="/c behat -p firefox_local --format pretty --out ${basedir}/report/pretty.out"/>
+    </exec>
+  </target>
+   <target name="run">
+    <delete dir="${basedir}/report" />
+      <mkdir dir="${basedir}/report"/>
+      <parallel>
+        <antcall target="chrome"></antcall>
+        <antcall target="firefox"></antcall>
+        <antcall target="iexplore"></antcall>
+     </parallel>
+  </target>
+  <target name="chrome">
+    <exec dir="${basedir}" executable="cmd" failonerror="true">
+      <arg line= "/c behat -p chrome --format pretty --out ${basedir}/report/chrome.out"/>
+    </exec>
+  </target>
+  <target name="firefox">
+    <exec dir="${basedir}" executable="cmd" failonerror="true">
+       <arg line= "/c behat -p firefox --format pretty --out ${basedir}/report/firefox.out"/>
+    </exec>
+  </target>
+  <target name="iexplore">
+    <exec dir="${basedir}" executable="cmd" failonerror="true">
+       <arg line= "/c behat -p iexplore --format pretty --out ${basedir}/report/iexplore.out"/>
+    </exec>
+  </target>
+</project>
