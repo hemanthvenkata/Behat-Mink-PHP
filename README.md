@@ -1,5 +1,7 @@
 # Behat-Mink-PHP
-Cross Browser Sample Tests on Saucelabs
+Cross Browser Sample Tests on Saucelabs 
+
+Note: build.xml is for windows.
 
 #Usage
 
